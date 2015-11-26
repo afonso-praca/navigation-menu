@@ -1,0 +1,10 @@
+{
+  "resourceBinding": {
+    "locator": "categories@vtex.storefront-sdk",
+    "relativePath": "/dreamstore/categories"
+  },
+  "assets": [
+    "common.js",
+    "Menu.js"
+  ]
+}
