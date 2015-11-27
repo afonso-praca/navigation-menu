@@ -5,6 +5,6 @@
   },
   "assets": [
     "common.js",
-    "Menu.js"
+    "NavigationMenu.js"
   ]
 }

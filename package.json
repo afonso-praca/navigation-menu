@@ -1,6 +1,6 @@
 {
-  "name": "menu",
-  "description": "Menu component",
+  "name": "navigation-menu",
+  "description": "Navigation menu component",
   "version": null,
   "private": true,
   "dependencies": {

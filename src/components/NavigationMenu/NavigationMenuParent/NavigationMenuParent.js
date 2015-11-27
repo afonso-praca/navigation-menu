@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { history } from 'sdk';
-import MenuChildrenContainer from './MenuChildrenContainer/MenuChildrenContainer';
-import './MenuParentButton.less';
+import NavigationMenuContainer from './NavigationMenuContainer/NavigationMenuContainer';
+import './NavigationMenuParent.less';
 
-class MenuParentButton extends React.Component {
+class NavigationMenuParent extends React.Component {
   handleTouchTap = () => {
     this.props.openChildren(this.props.category.get('name'));
   }
@@ -18,7 +18,7 @@ class MenuParentButton extends React.Component {
     let isActive = this.props.isActive;
     let content = isActive ?
       (
-        <MenuChildrenContainer
+        <NavigationMenuContainer
           parentSlug={this.props.category.get('slug')}
           itemChildren={this.props.category.get('children')}
           isActive={this.props.isActive}
@@ -64,4 +64,4 @@ class MenuParentButton extends React.Component {
   }
 }
 
-export default MenuParentButton;
+export default NavigationMenuParent;

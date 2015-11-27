@@ -6,7 +6,7 @@ var production = process.env.NODE_ENV === 'production';
 
 var config = {
   entry: {
-    'Menu': ['./src/components/index.js']
+    'NavigationMenu': ['./src/components/index.js']
   },
 
   module: {

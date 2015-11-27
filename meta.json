@@ -1,8 +1,8 @@
 {
-  "name": "menu",
+  "name": "navigation-menu",
   "vendor": "vtex",
-  "title": "Menu",
-  "description": "Menu component",
+  "title": "Navigation Menu",
+  "description": "Navigation menu component",
   "version": "0.1.0",
   "dependencies": {
     "vtex.storefront": "0"

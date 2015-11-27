@@ -1,10 +1,10 @@
 import { actions } from 'sdk';
-import Menu from './Menu/Menu';
+import NavigationMenu from './NavigationMenu/NavigationMenu';
 
 let components = [
   {
-    name: 'Menu@vtex.menu',
-    constructor: Menu,
+    name: 'NavigationMenu@vtex.navigation-menu',
+    constructor: NavigationMenu,
   }
 ];
 

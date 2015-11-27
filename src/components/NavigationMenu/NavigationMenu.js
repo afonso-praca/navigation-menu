@@ -1,10 +1,10 @@
 import React from 'react';
 import { stores, utils } from 'sdk';
-import MenuParentButton from './MenuParentButton/MenuParentButton';
-import './Menu.less';
+import NavigationMenuParent from './NavigationMenuParent/NavigationMenuParent';
+import './NavigationMenu.less';
 
 @utils.connectToStores()
-class Menu extends React.Component {
+class NavigationMenu extends React.Component {
   state = {
     activeItem: {}
   }
@@ -46,7 +46,7 @@ class Menu extends React.Component {
       let isItemActive = this.state.activeItem[category.get('name')] || false;
 
       return (
-        <MenuParentButton
+        <NavigationMenuParent
           key={category.get('name')}
           category={category}
           openChildren={this.openChildren}
@@ -83,4 +83,4 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+export default NavigationMenu;

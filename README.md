@@ -1,7 +1,7 @@
-# Menu
+# Navigation Menu
 
-A menu component.
+A navigation menu component.
 
 ## Usage
 
-Add "vtex.menu" as your app dependency.
+Add "vtex.navigation-menu" as your app dependency.

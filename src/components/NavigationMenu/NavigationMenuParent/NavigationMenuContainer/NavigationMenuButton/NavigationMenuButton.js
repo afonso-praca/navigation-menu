@@ -1,8 +1,8 @@
 import React from 'react';
 import { history } from 'sdk';
-import './MenuButton.less';
+import './NavigationMenuButton.less';
 
-class MenuButton extends React.Component {
+class NavigationMenuButton extends React.Component {
   handleTouchTap = () => {
     this.props.toggleMenu();
     history.pushState(null, this.props.slug, { pageSize: 5 });
@@ -20,4 +20,4 @@ class MenuButton extends React.Component {
   }
 }
 
-export default MenuButton;
+export default NavigationMenuButton;
