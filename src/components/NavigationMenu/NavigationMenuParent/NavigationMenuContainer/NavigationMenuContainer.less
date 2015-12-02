@@ -1,7 +1,7 @@
 @import "~utils/base/base";
 @import "~vtex-css-utils/less/_css-utils";
 
-.MenuChildrenContainer {
+.NavigationMenuContainer {
   list-style-type: none;
   border-bottom: 1px solid lighten(#014673, 5%);
   color: #FFF;
@@ -17,7 +17,7 @@
     opacity: 0;
     max-height: 0px;
 
-    &.MenuChildrenContainer-enter-active {
+    &.NavigationMenuContainer-enter-active {
       opacity: 1;
       max-height: 1000px;
       transition: opacity 100ms ease-in,
@@ -29,7 +29,7 @@
     opacity: 1;
     max-height: 1000px;
 
-    &.MenuChildrenContainer-leave-active {
+    &.NavigationMenuContainer-leave-active {
       opacity: 0;
       max-height: 0px;
       transition: opacity 200ms ease-out,
