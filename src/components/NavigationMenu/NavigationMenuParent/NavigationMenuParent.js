@@ -27,33 +27,33 @@ class NavigationMenuParent extends React.Component {
       ) : null;
 
     return (
-      <li className="MenuParentButton" data-is-open={isActive}>
+      <li className="NavigationMenuParent" data-is-open={isActive}>
         <div
-          className="menu-parent-button-content"
+          className="navigation-menu-parent-button-content"
           onTouchTap={this.handleTouchTap}
         >
-          <span className="menu-parent-button-name">
+          <span className="navigation-menu-parent-button-name">
             { this.props.category.get('name') }
           </span>
           <button
-            className="menu-parent-button-symbol"
+            className="navigation-menu-parent-button-symbol"
             data-is-open={isActive}
           />
         </div>
         <div
-          className="menu-parent-button-see-all row-fluid"
+          className="navigation-menu-parent-button-see-all row-fluid"
           data-is-open={isActive}
         >
           <a
             href="#"
-            className="menu-parent-button-see-all-link"
+            className="navigation-menu-parent-button-see-all-link"
             onTouchTap={this.handleLinkTap}
           >
             Ver todos da categoria
           </a>
         </div>
         <ReactCSSTransitionGroup
-          transitionName="MenuChildrenContainer"
+          transitionName="NavigationMenuContainer"
           transitionEnterTimeout={150}
           transitionLeaveTimeout={250}
         >

@@ -19,7 +19,7 @@ class NavigationMenuContainer extends React.Component {
 
     return (
       <ul
-        className="MenuChildrenContainer"
+        className="NavigationMenuContainer"
         data-is-open={this.props.isActive}
       >
         { children }

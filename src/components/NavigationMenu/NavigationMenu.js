@@ -57,24 +57,24 @@ class NavigationMenu extends React.Component {
     });
 
     return (
-      <div className="container Menu">
+      <div className="container NavigationMenu">
         <div className="row">
-          <nav className="menu-header">
+          <nav className="navigation-menu-header">
             <button
-              className="menu-header-button"
+              className="navigation-menu-header-button"
               onTouchTap={this.handleTouchTap}
             />
           </nav>
         </div>
         <div className="row">
-          <div className="menu-content">
-            <h1 className="menu-content-title text-left">
+          <div className="navigation-menu-content">
+            <h1 className="navigation-menu-content-title text-left">
               Departamentos
             </h1>
           </div>
         </div>
         <div className="row">
-          <ul className="col-xs-12 menu-container">
+          <ul className="col-xs-12 navigation-menu-container">
             { items }
           </ul>
         </div>
