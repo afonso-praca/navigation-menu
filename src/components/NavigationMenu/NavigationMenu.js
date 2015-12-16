@@ -44,7 +44,6 @@ class NavigationMenu extends React.Component {
   render() {
     let items = this.props.categories.valueSeq().map((category) => {
       let isItemActive = this.state.activeItem[category.get('name')] || false;
-
       return (
         <NavigationMenuParent
           key={category.get('name')}
@@ -54,7 +53,7 @@ class NavigationMenu extends React.Component {
           toggleMenu={this.props.toggleMenu}
         />
       );
-    });
+    }).toArray();
 
     return (
       <div className="container NavigationMenu">
