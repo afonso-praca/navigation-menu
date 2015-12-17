@@ -1,9 +1,9 @@
 import React from 'react';
-import { stores, utils } from 'sdk';
+import { stores, connectToStores } from 'sdk';
 import NavigationMenuParent from './NavigationMenuParent/NavigationMenuParent';
 import './NavigationMenu.less';
 
-@utils.connectToStores()
+@connectToStores()
 class NavigationMenu extends React.Component {
   state = {
     activeItem: {}
