@@ -3,7 +3,7 @@
   "vendor": "vtex",
   "title": "Navigation Menu",
   "description": "Navigation menu component",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "dependencies": {
     "vtex.storefront": "0"
   }
