@@ -56,24 +56,24 @@ class NavigationMenu extends React.Component {
     }).toArray();
 
     return (
-      <div className="container NavigationMenu">
+      <div className="container-fluid NavigationMenu">
         <div className="row">
-          <nav className="navigation-menu-header">
+          <nav className="NavigationMenu__header">
             <button
-              className="navigation-menu-header-button"
+              className="NavigationMenu__header-button"
               onTouchTap={this.handleTouchTap}
             />
           </nav>
         </div>
         <div className="row">
-          <div className="navigation-menu-content">
-            <h1 className="navigation-menu-content-title text-left">
+          <div className="NavigationMenu__content">
+            <h1 className="text-left theme__font-family--main theme__color--primary">
               Departamentos
             </h1>
           </div>
         </div>
         <div className="row">
-          <ul className="col-xs-12 navigation-menu-container">
+          <ul className="col-xs-12 NavigationMenu__container">
             { items }
           </ul>
         </div>

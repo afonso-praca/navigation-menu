@@ -27,26 +27,26 @@ class NavigationMenuParent extends React.Component {
       ) : null;
 
     return (
-      <li className="NavigationMenuParent" data-is-open={isActive}>
+      <li className="NavigationMenuParent row theme__border-color--dark-plus" data-is-open={isActive}>
         <div
-          className="navigation-menu-parent-button-content"
+          className="NavigationMenuParent__button-content theme__background-color--dark"
           onTouchTap={this.handleTouchTap}
         >
-          <span className="navigation-menu-parent-button-name">
+          <span className="NavigationMenuParent__button-name theme__font-family--main">
             { this.props.category.get('name') }
           </span>
           <button
-            className="navigation-menu-parent-button-symbol"
+            className="NavigationMenuParent__button-symbol"
             data-is-open={isActive}
           />
         </div>
         <div
-          className="navigation-menu-parent-button-see-all row-fluid"
+          className="NavigationMenuParent__button-see-all theme__background-color--dark row-fluid theme__font-family--regular"
           data-is-open={isActive}
         >
           <a
             href="#"
-            className="navigation-menu-parent-button-see-all-link"
+            className="NavigationMenuParent__button-see-all-link theme__color--accent theme__hover-color--accent theme__font-family--regular"
             onTouchTap={this.handleLinkTap}
           >
             Ver todos da categoria

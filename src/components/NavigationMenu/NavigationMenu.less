@@ -9,37 +9,33 @@
   height: 100%;
   background-color: @gray-soft;
 
-  .navigation-menu-container {
+  &__container {
     width: 100%;
-    background-color: #014673;
+    background-color: #373737;
     list-style-type: none;
     border-radius: 2px;
     padding: 0;
     margin-bottom: 0;
   }
 
-  .navigation-menu-header {
+  &__header {
     background: @gray-soft;
     border-bottom: 1px solid darken(#FFF, 25%);
     height: 40px;
     width: 100%;
 
-    .navigation-menu-header-button {
-      .v-clean-btn;
-      background: url('http://i.imgur.com/Q8C5MZl.png') no-repeat;
-      background-size: 11px auto;
-      background-position: center center;
-      padding: 20px;
-    }
   }
 
-  .navigation-menu-content {
-    margin: 20px 0;
+  &__header-button {
+    .css-utils-clean-btn();
+    background: url('http://i.imgur.com/Q8C5MZl.png') no-repeat;
+    background-size: 11px auto;
+    background-position: center center;
+    padding: 20px;
+  }
 
-    .navigation-menu-content-title {
-      margin: 0px;
-      padding-left: 30px;
-    }
+  &__content {
+    margin: 10px 0;
   }
 
   &-enter {

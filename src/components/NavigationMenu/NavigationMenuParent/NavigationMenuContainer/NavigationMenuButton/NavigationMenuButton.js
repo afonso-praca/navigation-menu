@@ -10,11 +10,11 @@ class NavigationMenuButton extends React.Component {
 
   render() {
     return (
-      <li className="NavigationMenuButton" onTouchTap={this.handleTouchTap}>
-        <span className="navigation-menu-button-name">
+      <li className="NavigationMenuButton theme__border-color--light-plus" onTouchTap={this.handleTouchTap}>
+        <span className="NavigationMenuButton__name theme__color--accent">
           { this.props.name }
         </span>
-        <button className="navigation-menu-button-symbol" />
+        <button className="NavigationMenuButton__button-symbol" />
       </li>
     );
   }
