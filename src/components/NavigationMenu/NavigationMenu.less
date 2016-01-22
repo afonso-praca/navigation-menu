@@ -18,20 +18,23 @@
     margin-bottom: 0;
   }
 
-  &__header {
+  &__navbar {
     background: @gray-soft;
     border-bottom: 1px solid darken(#FFF, 25%);
     height: 40px;
     width: 100%;
-
   }
 
-  &__header-button {
+  &__navbar-button {
     .css-utils-clean-btn();
     background: url('http://i.imgur.com/Q8C5MZl.png') no-repeat;
     background-size: 11px auto;
     background-position: center center;
     padding: 20px;
+  }
+
+  &__header {
+    margin: 45px 0px 30px 15px;
   }
 
   &__content {
@@ -45,8 +48,7 @@
     &.NavigationMenu-enter-active {
       opacity: 1;
       left: 0px;
-      transition: opacity 150ms ease-in,
-               left 200ms ease-in;
+      transition: opacity 150ms ease-in, left 200ms ease-in;
     }
   }
 
@@ -57,8 +59,7 @@
     &.NavigationMenu-leave-active {
       opacity: 0;
       left: -300px;
-      transition: opacity 200ms ease-out,
-               left 250ms ease-out;
+      transition: opacity 200ms ease-out, left 250ms ease-out;
     }
   }
 }

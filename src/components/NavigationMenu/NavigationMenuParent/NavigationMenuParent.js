@@ -3,6 +3,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { history } from 'sdk';
 import NavigationMenuContainer from './NavigationMenuContainer/NavigationMenuContainer';
 import './NavigationMenuParent.less';
+import SVGIcon from 'utils/SVGIcon';
+import minusIcon from 'assets/icons/minus_icon.svg';
+import minusImg from 'assets/icons/minus_icon.png';
+import plusIcon from 'assets/icons/plus_icon.svg';
+import plusImg from 'assets/icons/plus_icon.png';
 
 class NavigationMenuParent extends React.Component {
   handleTouchTap = () => {
@@ -26,6 +31,10 @@ class NavigationMenuParent extends React.Component {
         />
       ) : null;
 
+    const icon = {
+      svg: !this.props.isActive ? plusIcon : minusIcon,
+      img: !this.props.isActive ? plusImg : minusImg
+    };
     return (
       <li className="NavigationMenuParent row theme__border-color--dark-plus" data-is-open={isActive}>
         <div
@@ -35,10 +44,15 @@ class NavigationMenuParent extends React.Component {
           <span className="NavigationMenuParent__button-name theme__font-family--main">
             { this.props.category.get('name') }
           </span>
-          <button
-            className="NavigationMenuParent__button-symbol"
-            data-is-open={isActive}
-          />
+          <button data-is-open={isActive} className="NavigationMenuParent__button-toggle">
+            <SVGIcon
+              svg={icon.svg}
+              fallback={icon.img}
+              width={15}
+              cleanupExceptions={['width', 'height']}
+              fill="#fff"
+            />
+          </button>
         </div>
         <div
           className="NavigationMenuParent__button-see-all theme__background-color--dark row-fluid theme__font-family--regular"
