@@ -50,16 +50,16 @@ class NavigationMenu extends React.Component {
     return (
       <div className="container-fluid NavigationMenu">
         <div className="row">
-          <nav className="NavigationMenu__header">
+          <nav className="NavigationMenu__navbar">
             <button
-              className="NavigationMenu__header-button"
+              className="NavigationMenu__navbar-button"
               onTouchTap={this.handleTouchTap}
             />
           </nav>
         </div>
         <div className="row">
           <div className="NavigationMenu__content">
-            <h1 className="text-left theme__font-family--main theme__color--primary">
+            <h1 className="text-left theme__font-family--main theme__color--primary NavigationMenu__header">
               Departamentos
             </h1>
           </div>
