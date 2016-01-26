@@ -21,14 +21,6 @@ class NavigationMenu extends React.Component {
     };
   }
 
-  componentDidMount() {
-    document.body.style.overflow = 'hidden';
-  }
-
-  componentWillUnmount() {
-    document.body.style.overflow = 'visible';
-  }
-
   openChildren = (categoryName) => {
     let activeItem = this.state.activeItem[categoryName] || false;
     let activeItemClone = this.state.activeItem;
