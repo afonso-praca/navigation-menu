@@ -1,12 +1,12 @@
 @import "~vtex-css-utils/less/_css-utils";
 
 .NavigationMenuParent {
-  border-bottom: 1px solid lighten(#014673, 5%);
+  border-bottom: 1px solid lighten(#444, 5%);
   overflow: hidden;
 
-  .navigation-menu-parent-button-content {
+  &__button-content {
     display: block;
-    background-color: #014673;
+    background-color: #444;
     color: #FFF;
     font-size: 1em;
     font-weight: 500;
@@ -19,36 +19,26 @@
     }
   }
 
-  .navigation-menu-parent-button-name {
-    text-transform: uppercase;
+  &__button-name {
+    .v-unselectable;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: italic;
     color: #fff;
+    cursor: pointer;
   }
 
-  .navigation-menu-parent-button-symbol {
+  &__button-toggle {
     .v-clean-btn;
     .v-no-outlines;
-    float: right;
-    width: 20px;
-    height: 20px;
-
-    &[data-is-open=false] {
-      background: url('http://i.imgur.com/F27xaVl.png') no-repeat;
-      background-size: 14px auto !important;
-      background-position: center center;
-    }
-
-    &[data-is-open=true] {
-      background: url('http://i.imgur.com/N4bf2Sa.png') no-repeat;
-      background-size: 14px auto !important;
-      background-position: center center;
-    }
+    float: right
   }
 
-  .navigation-menu-parent-button-see-all {
-    background: #004575;
+  &__button-see-all {
+    background: #444;
     color: #FFF;
-    font-weight: 400;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 1em;
+    font-weight: 400;
     margin-top: -0.5em;
     padding: 0em 30px 0.5em 30px;
     text-decoration: uppercase;
@@ -68,8 +58,14 @@
     }
   }
 
-  .navigation-menu-parent-button-see-all-link {
+  &__button-see-all-link {
+    color: #84BAE2;
     width: 100%;
     height: 100%;
+
+    &:hover {
+      color: darken(#84BAE2, 5%);
+      text-decoration: none;
+    }
   }
 }

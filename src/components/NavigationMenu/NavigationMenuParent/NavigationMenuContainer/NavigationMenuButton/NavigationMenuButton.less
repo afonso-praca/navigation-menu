@@ -1,26 +1,25 @@
 @import "~vtex-css-utils/less/_css-utils";
 
 .NavigationMenuButton {
-  border-bottom: 1px solid lighten(#014673, 5%);
+  border-bottom: 1px solid #eaeaea;
   background-color: #fff;
   padding: 1em 30px 1em 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &:active {
     background-color: #f2f3f4;
   }
 
-  .navigation-menu-button-name {
-    color: #003b5e;
+  &__name {
+    color: #12578A;
   }
 
-  .navigation-menu-button-symbol {
-    .v-clean-btn;
-    .v-no-outlines;
-    background: url('http://i.imgur.com/aeCOkaV.png') no-repeat;
-    background-size: 14px auto;
-    background-position: center center;
+  &__button-symbol {
+    .css-utils-clean-btn();
+    .css-utils-no-outlines();
     float: right;
-    width: 20px;
-    height: 20px;
   }
 }
