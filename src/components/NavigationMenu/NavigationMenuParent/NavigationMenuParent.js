@@ -59,7 +59,6 @@ class NavigationMenuParent extends React.Component {
           data-is-open={isActive}
         >
           <a
-            href="#"
             className="NavigationMenuParent__button-see-all-link theme__color--accent theme__hover-color--accent theme__font-family--regular"
             onTouchTap={this.handleLinkTap}
           >
