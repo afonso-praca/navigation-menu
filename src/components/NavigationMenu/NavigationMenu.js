@@ -21,14 +21,6 @@ class NavigationMenu extends React.Component {
     };
   }
 
-  openChildren = (categoryName) => {
-    let activeItem = this.state.activeItem[categoryName] || false;
-    let activeItemClone = this.state.activeItem;
-
-    activeItemClone[categoryName] = !activeItem;
-    this.setState({ activeItem: activeItemClone });
-  }
-
   handleTouchTap = () => {
     this.props.toggleMenu();
   }
@@ -40,7 +32,6 @@ class NavigationMenu extends React.Component {
         <NavigationMenuParent
           key={category.get('name')}
           category={category}
-          openChildren={this.openChildren}
           isActive={isItemActive}
           toggleMenu={this.props.toggleMenu}
         />
@@ -56,13 +47,6 @@ class NavigationMenu extends React.Component {
               onTouchTap={this.handleTouchTap}
             />
           </nav>
-        </div>
-        <div className="row">
-          <div className="NavigationMenu__content">
-            <h1 className="text-left theme__font-family--main theme__color--primary NavigationMenu__header">
-              Departamentos
-            </h1>
-          </div>
         </div>
         <div className="row">
           <ul className="col-xs-12 NavigationMenu__container">

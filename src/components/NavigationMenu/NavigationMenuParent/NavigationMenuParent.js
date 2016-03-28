@@ -3,11 +3,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { history } from 'sdk';
 import NavigationMenuContainer from './NavigationMenuContainer/NavigationMenuContainer';
 import './NavigationMenuParent.less';
-import SVGIcon from 'utils/SVGIcon';
-import minusIcon from 'assets/icons/minus_icon.svg';
-import minusImg from 'assets/icons/minus_icon.png';
-import plusIcon from 'assets/icons/plus_icon.svg';
-import plusImg from 'assets/icons/plus_icon.png';
 
 class NavigationMenuParent extends React.Component {
   handleTouchTap = () => {
@@ -16,7 +11,7 @@ class NavigationMenuParent extends React.Component {
 
   handleLinkTap = () => {
     this.props.toggleMenu();
-    history.pushState(null, `/${this.props.category.get('slug')}/c`, { pageSize: 5 });
+    history.pushState(null, `/${this.props.category.get('slug')}/c`, { pageSize: 12 });
   }
 
   render() {
@@ -26,49 +21,23 @@ class NavigationMenuParent extends React.Component {
         <NavigationMenuContainer
           parentSlug={this.props.category.get('slug')}
           itemChildren={this.props.category.get('children')}
-          isActive={this.props.isActive}
-          toggleMenu={this.props.toggleMenu}
         />
       ) : null;
 
-    const icon = {
-      svg: !this.props.isActive ? plusIcon : minusIcon,
-      img: !this.props.isActive ? plusImg : minusImg
-    };
     return (
-      <li className="NavigationMenuParent row theme__border-color--dark-plus" data-is-open={isActive}>
+      <li className="NavigationMenuParent row" data-is-open={isActive}>
         <div
-          className="NavigationMenuParent__button-content theme__background-color--dark"
-          onTouchTap={this.handleTouchTap}
+          className="NavigationMenuParent__button-content"
+          onTouchTap={this.handleLinkTap}
         >
           <span className="NavigationMenuParent__button-name theme__font-family--main">
             { this.props.category.get('name') }
           </span>
-          <button data-is-open={isActive} className="NavigationMenuParent__button-toggle">
-            <SVGIcon
-              svg={icon.svg}
-              fallback={icon.img}
-              width={15}
-              cleanupExceptions={['width', 'height']}
-              fill="#fff"
-            />
-          </button>
-        </div>
-        <div
-          className="NavigationMenuParent__button-see-all theme__background-color--dark row-fluid theme__font-family--regular"
-          data-is-open={isActive}
-        >
-          <a
-            className="NavigationMenuParent__button-see-all-link theme__color--accent theme__hover-color--accent theme__font-family--regular"
-            onTouchTap={this.handleLinkTap}
-          >
-            Ver todos da categoria
-          </a>
         </div>
         <ReactCSSTransitionGroup
           transitionName="NavigationMenuContainer"
           transitionEnterTimeout={150}
-          transitionLeaveTimeout={250}
+          transitionLeaveTimeout={500}
         >
           { content }
         </ReactCSSTransitionGroup>
