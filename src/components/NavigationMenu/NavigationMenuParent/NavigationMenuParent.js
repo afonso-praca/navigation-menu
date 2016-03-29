@@ -3,6 +3,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { history } from 'sdk';
 import NavigationMenuContainer from './NavigationMenuContainer/NavigationMenuContainer';
 import './NavigationMenuParent.less';
+import './NavigationMenuParentCustom.less';
+import '../utils.less';
 
 class NavigationMenuParent extends React.Component {
   handleTouchTap = () => {
@@ -30,7 +32,7 @@ class NavigationMenuParent extends React.Component {
           className="NavigationMenuParent__button-content"
           onTouchTap={this.handleLinkTap}
         >
-          <span className="NavigationMenuParent__button-name theme__font-family--main">
+          <span className="NavigationMenuParent__button-name">
             { this.props.category.get('name') }
           </span>
         </div>

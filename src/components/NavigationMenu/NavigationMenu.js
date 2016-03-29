@@ -2,6 +2,8 @@ import React from 'react';
 import { stores, connectToStores } from 'sdk';
 import NavigationMenuParent from './NavigationMenuParent/NavigationMenuParent';
 import './NavigationMenu.less';
+import './NavigationMenuCustom.less';
+import './utils.less';
 
 @connectToStores()
 class NavigationMenu extends React.Component {
@@ -44,8 +46,7 @@ class NavigationMenu extends React.Component {
           <nav className="NavigationMenu__navbar">
             <button
               className="NavigationMenu__navbar-button"
-              onTouchTap={this.handleTouchTap}
-            />
+              onTouchTap={this.handleTouchTap}>X</button>
           </nav>
         </div>
         <div className="row">

@@ -4,7 +4,7 @@ import NavigationMenu from './NavigationMenu/NavigationMenu';
 let components = [
   {
     name: 'NavigationMenu@vtex.navigation-menu',
-    constructor: NavigationMenu,
+    constructor: NavigationMenu
   }
 ];
 
