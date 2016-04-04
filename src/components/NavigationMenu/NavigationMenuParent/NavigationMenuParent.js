@@ -27,23 +27,25 @@ class NavigationMenuParent extends React.Component {
       ) : null;
 
     return (
-      <li className="NavigationMenuParent row" data-is-open={isActive}>
-        <div
-          className="NavigationMenuParent__button-content"
-          onTouchTap={this.handleLinkTap}
-        >
-          <span className="NavigationMenuParent__button-name">
-            { this.props.category.get('name') }
-          </span>
-        </div>
-        <ReactCSSTransitionGroup
-          transitionName="NavigationMenuContainer"
-          transitionEnterTimeout={150}
-          transitionLeaveTimeout={500}
-        >
-          { content }
-        </ReactCSSTransitionGroup>
-      </li>
+      <div className="container-fluid">
+        <li className="NavigationMenuParent row" data-is-open={isActive}>
+          <div
+            className="NavigationMenuParent__button-content"
+            onTouchTap={this.handleLinkTap}
+          >
+            <span className="NavigationMenuParent__button-name">
+              { this.props.category.get('name') }
+            </span>
+          </div>
+          <ReactCSSTransitionGroup
+            transitionName="NavigationMenuContainer"
+            transitionEnterTimeout={150}
+            transitionLeaveTimeout={500}
+          >
+            { content }
+          </ReactCSSTransitionGroup>
+        </li>
+      </div>
     );
   }
 }
