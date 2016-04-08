@@ -3,7 +3,7 @@ import NavigationMenu from './NavigationMenu/NavigationMenu';
 
 let components = [
   {
-    name: 'NavigationMenu@vtex.navigation-menu',
+    name: 'NavigationMenu@pilateslovers.navigation-menu',
     constructor: NavigationMenu
   }
 ];
