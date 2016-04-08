@@ -3,7 +3,7 @@
   "vendor": "pilateslovers",
   "title": "Navigation Menu",
   "description": "Navigation menu component",
-  "version": "0.2.1",
+  "version": "0.1.0",
   "dependencies": {
     "vtex.storefront": "0"
   }
