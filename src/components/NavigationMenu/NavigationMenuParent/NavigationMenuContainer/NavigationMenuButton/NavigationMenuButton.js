@@ -14,7 +14,7 @@ class NavigationMenuButton extends React.Component {
 
   render() {
     return (
-      <li className="NavigationMenuButton theme__border-color--light-plus" onTouchTap={this.handleTouchTap}>
+      <li className="NavigationMenuButton theme__border-color--light-plus" onClick={this.handleTouchTap}>
         <span className="NavigationMenuButton__name theme__color--accent">
           { this.props.name }
         </span>

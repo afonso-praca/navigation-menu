@@ -46,7 +46,7 @@ class NavigationMenu extends React.Component {
           <nav className="NavigationMenu__navbar">
             <button
               className="NavigationMenu__navbar-button"
-              onTouchTap={this.handleTouchTap}>X</button>
+              onClick={this.handleTouchTap}>X</button>
           </nav>
         </div>
         <div className="row">

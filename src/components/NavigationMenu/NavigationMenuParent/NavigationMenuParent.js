@@ -31,7 +31,7 @@ class NavigationMenuParent extends React.Component {
         <li className="NavigationMenuParent row" data-is-open={isActive}>
           <div
             className="NavigationMenuParent__button-content"
-            onTouchTap={this.handleLinkTap}
+            onClick={this.handleLinkTap}
           >
             <span className="NavigationMenuParent__button-name">
               { this.props.category.get('name') }
